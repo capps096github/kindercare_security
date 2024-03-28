@@ -1,12 +1,19 @@
-<!-- checks if the teacher is log in -->
+<!-- Generate a Unique to Prevent Cross Site  -->
 <?php
-// session_start();
-// if (!isset($_SESSION["teacher_id"])) {
-//   header("Location: ../teacher/login.php");
-//   exit();
-// }
+// 1. CSRF Token Generation and Validation:
+session_start();
 
+//* Generating a unique CSRF token for each user session.
+function generate_token() {
+  if (!isset($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = base64_encode(random_bytes(32));
+  }
+  return $_SESSION['csrf_token'];
+}
 ?>
+
+<!-- // Embedding the token in a hidden form field or sending it as a request header.
+// Validating the submitted token on the server-side to ensure it matches the one stored in the session. -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -81,8 +88,11 @@
       <!-- form div -->
       <div class="mt-10 justify-center items-center">
         <div class="max-w-xl mx-auto">
-          <!-- <form class="space-y-6 " action="add_pupil.php" method="post"> -->
-            <form class="space-y-6 " action="register_action.php" method="post">
+
+        <form class="space-y-6 " action="register_action.php" method="post">
+            <!-- CSRF Token -->
+            <input type="hidden" name="csrf_token" value="<?php echo generate_token(); ?>" />
+
             <!-- User Code -->
             <label class="block mt-4">
               <span class="block text-sm font-medium text-white">User Code</span>

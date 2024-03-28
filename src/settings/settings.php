@@ -126,8 +126,8 @@
           </a>
 
           <!-- Assignment -->
-          <!-- <a href="../db/clear_db.php" class="hover:cursor-pointer bg-red rounded-lg p-10 transition-colors duration-300 text-white hover:text-blue -->
-          <a href=" ../db/clear_sips_db.php" class="hover:cursor-pointer bg-red rounded-lg p-10 transition-colors duration-300 text-white hover:text-blue
+          <!-- <a href=" ../db/clear_sips_db.php" class="hover:cursor-pointer bg-red rounded-lg p-10 transition-colors duration-300 text-white hover:text-blue -->
+          <a href="../db/clear_db.php" class="hover:cursor-pointer bg-red rounded-lg p-10 transition-colors duration-300 text-white hover:text-blue
             hover:bg-white justify-center items-center">
 
             <div class="flex justify-center items-center mt-4 mb-4 ">
