@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION["teacher_id"])) {
-  header("Location: ../teacher/login.php");
-  exit();
-}
+// session_start();
+// if (!isset($_SESSION["teacher_id"])) {
+//   header("Location: ../teacher/login.php");
+//   exit();
+// }
 
 ?>
 <!DOCTYPE html>
@@ -82,22 +82,6 @@ if (!isset($_SESSION["teacher_id"])) {
 
       </div>
 
-      <!-- pending requests -->
-      <div class="mb-10">
-        <h2 class="text-3xl text-blue tracking-tight mt-12 mb-10 text-center font-bold sm:text-4xl md:text-5xl mx-auto">
-
-          Pending
-          <span class="text-darkred underline xl:inline">Activation</span>
-          Requests
-        </h2>
-
-
-        <!-- all registered pupils table -->
-        <?php
-        require_once 'pending_table.php';
-        ?>
-
-      </div>
     </main>
 
 

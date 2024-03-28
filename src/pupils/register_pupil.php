@@ -1,10 +1,10 @@
 <!-- checks if the teacher is log in -->
 <?php
-session_start();
-if (!isset($_SESSION["teacher_id"])) {
-  header("Location: ../teacher/login.php");
-  exit();
-}
+// session_start();
+// if (!isset($_SESSION["teacher_id"])) {
+//   header("Location: ../teacher/login.php");
+//   exit();
+// }
 
 ?>
 
