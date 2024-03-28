@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION["teacher_id"])) {
-  header("Location: ./teacher/login.php");
-  exit();
-}
+// session_start();
+// if (!isset($_SESSION["teacher_id"])) {
+//   header("Location: ./teacher/login.php");
+//   exit();
+// }
 
 ?>
 
@@ -105,8 +105,8 @@ if (!isset($_SESSION["teacher_id"])) {
         <div class="mt-10 md:grid-cols-2 lg:grid-cols-2 grid-cols-1 gap-2 sm:max-w-6xl max-w-6xl mx-auto grid">
 
           <!-- pupil -->
-          <!-- <a href="../db/dummy_data.php" class="hover:cursor-pointer bg-amber rounded-lg p-10 transition-colors duration-300 text-blue -->
-          <a href=" ../db/sips_dummy_data.php" class="hover:cursor-pointer bg-amber rounded-lg p-10 transition-colors duration-300 text-blue
+          <!-- <a href=" ../db/sips_dummy_data.php" class="hover:cursor-pointer bg-amber rounded-lg p-10 transition-colors duration-300 text-blue -->
+          <a href="../db/dummy_data.php" class="hover:cursor-pointer bg-amber rounded-lg p-10 transition-colors duration-300 text-blue
             hover:text-blue hover:bg-white justify-center items-center">
 
             <div class="flex justify-center items-center mt-4 mb-4 ">
